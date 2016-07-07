@@ -1,0 +1,139 @@
+<div ng-include src="'partials/header.html'"></div>
+<div class="page-content" ng-controller="addressCtrl">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-6 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            Supplier Address
+                        </h4>
+                        <br/>
+                        <form name="supplierForm" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="address1">Address1</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Address1" name="address1" ng-model="supplier.address1" focus/>
+                                        <span ng-show="supplierForm.address1.$error.address1" class="help-inline">Address1 is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="address2">Address2</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Address2" name="address2" ng-model="supplier.address2" focus/>
+                                        <span ng-show="supplierForm.address2.$error.address2" class="help-inline">Address2 is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="email">Email</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Email" name="email" ng-model="supplier.email" focus/>
+                                        <span ng-show="supplierForm.email.$error.email" class="help-inline">Email is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="city">City</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="City" name="city" ng-model="supplier.city" focus/>
+                                        <span ng-show="supplierForm.city.$error.city" class="help-inline">City is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="state">State</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="State" name="state" ng-model="supplier.city" focus/>
+                                        <span ng-show="supplierForm.state.$error.state" class="help-inline">State is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="country">Country</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Country" name="country" ng-model="supplier.city" focus/>
+                                        <span ng-show="supplierForm.country.$error.country" class="help-inline">Country is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="zipcode">Zipcode</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Zipcode" name="zipcode" ng-model="supplier.city" focus/>
+                                        <span ng-show="supplierForm.zipcode.$error.zipcode" class="help-inline">Zipcode is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                              <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="phone1">Phone1</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Phone1" name="phone1" ng-model="supplier.phone1" focus/>
+                                        <span ng-show="supplierForm.phone1.$error.phone1" class="help-inline">Phone1 is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                              <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="phone2">Phone2</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Phone2" name="phone2" ng-model="supplier.phone2" focus/>
+                                        <span ng-show="supplierForm.phone2.$error.phone2" class="help-inline">Phone2 is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                              <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="mobile">Mobile</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Mobile" name="mobile" ng-model="supplier.mobile" focus/>
+                                        <span ng-show="supplierForm.mobile.$error.mobile" class="help-inline">Mobile is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-show="myDropDown=='organization'">
+                                <label class="col-sm-5 control-label no-padding-right" for="orgname">Organization</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" name = "orgname" placeholder="Organization" ng-model="supplier.orgname" required/>
+                                <small class="errorMessage" data-ng-show="supplierForm.orgname.$error.orgname" class="help-inline"> Enter Organization.</small>
+                            </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="lbl col-sm-5"> </span>
+                                <div class="col-sm-7">
+                                    <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="supplierSign(supplier)" data-ng-disabled="supplierForm.$invalid">
+                                        Sign Up
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="lbl col-sm-5"> </span>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /.page-content -->

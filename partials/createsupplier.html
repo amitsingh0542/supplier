@@ -1,0 +1,76 @@
+<div ng-include src="'partials/header.html'"></div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-6 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            Create Supplier
+                        </h4>
+                        <br/>
+                        <form name="supplierForm" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="name">Name</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Name" name="name" ng-model="supplier.name" focus required />
+                                        <span ng-show="supplierForm.name.$error.name" class="help-inline">Name is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-5 control-label no-padding-right" for="sel1" required>Select Org/Ind:</label>
+                              <div class="col-sm-7">
+                                  <select class="form-control" name="orgtype" id="orgtype" ng-model="supplier.orgtype">
+                                    <option value="organization">Organization</option>
+                                    <option value="individual">Individual</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-if="supplier.orgtype=='organization'">
+                                <label class="col-sm-5 control-label no-padding-right" for="orgname">Organization</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" name = "orgname" placeholder="Organization" ng-model="supplier.orgname" required />
+                                <small class="errorMessage" data-ng-show="supplierForm.orgname.$error.orgname" class="help-inline"> Enter Organization.</small>
+                            </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="url">URL</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="url" class="form-control" name="url" placeholder="http://www.google.com" ng-model="supplier.url" />
+                            </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="pan">PAN</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" name = "pan" placeholder="PAN" ng-model="supplier.pan" required/>
+                                <small class="errorMessage" data-ng-show="supplierForm.pan.$error.pan" class="help-inline"> Enter PAN.</small>
+                            </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <span class="lbl col-sm-5"> </span>
+                                <div class="col-sm-7">
+                                    <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="supplierSign(supplier)" data-ng-disabled="supplierForm.$invalid">
+                                        Sign Up
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="lbl col-sm-5"> </span>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /.page-content -->

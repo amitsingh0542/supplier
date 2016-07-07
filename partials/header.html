@@ -1,0 +1,9 @@
+EmpId: {{uid}} | Welcome {{name}} | E-MAIL: {{email}}
+<div class="breadcrumbs" id="breadcrumbs" ng-controller="authCtrl">
+    <ul class="breadcrumb">
+        <li><a href="#/dashboard" ng-class="getClass('/dashboard')">Dashboard</a></li>
+        <li><a href="#/createuser" ng-class="getClass('/createuser')">Create User</a></li>
+        <li><a href="#/createsupplier" ng-class="getClass('/createsupplier')">Create Supplier</a></li>
+        <li><a ng-click="logout();">Logout</a></li>
+    </ul>
+</div>
