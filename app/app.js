@@ -23,9 +23,14 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/createsupplier.html',
                 controller: 'authCtrl'
             })
-            .when('/addaddress', {
+            .when('/addaddress/:id', {
                 title: 'Supplier Address',
                 templateUrl: 'partials/addaddress.html',
+                controller: 'authCtrl'
+            })
+             .when('/addbank/:id', {
+                title: 'Supplier Address',
+                templateUrl: 'partials/addbank.html',
                 controller: 'authCtrl'
             })
             .when('/dashboard', {

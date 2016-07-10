@@ -1,0 +1,99 @@
+<div ng-include src="'partials/header.html'"></div>
+<div class="page-content" ng-controller="addressCtrl">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-6 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            Supplier Address
+                        </h4>
+                        <br/>
+                        <form name="supplierForm" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="favour">Favour</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Favour" name="favour" ng-model="supplier.favour" focus required/>
+                                        <span ng-show="supplierForm.favour.$error.favour" class="help-inline">Favour is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="bankname">Bank Name</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Bank Name" name="bankname" ng-model="supplier.bankname" required /> 
+                                        <span ng-show="supplierForm.bankname.$error.bankname" class="help-inline">Bank name is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="ifsc">IFSC</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="email" class="form-control" placeholder="IFSC" name="ifsc" ng-model="supplier.ifsc" required />
+                                        <span ng-show="supplierForm.ifsc.$error.ifsc" class="help-inline">IFSC is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="micr">MICR</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="MICR" name="micr" ng-model="supplier.micr" required />
+                                        <span ng-show="supplierForm.micr.$error.micr" class="help-inline">MICR is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="acno">A/C No</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Account Number" name="acno" ng-model="supplier.acno" required />
+                                        <span ng-show="supplierForm.acno.$error.acno" class="help-inline">A/C no is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class="col-sm-5 control-label no-padding-right" for="actype" required>Account Type</label>
+                              <div class="col-sm-7">
+                                  <select class="form-control" name="actype" id="actype" ng-model="supplier.actype">
+                                    <option value="saving">Saving</option>
+                                    <option value="checking">Checking</option>
+                                  </select>
+                                </div>
+                            </div>
+
+                             <div class="form-group">
+                              <label class="col-sm-5 control-label no-padding-right" for="dbank" required>Default Bank</label>
+                              <div class="col-sm-7">
+                                  <select class="form-control" name="dbank" id="dbank" ng-model="supplier.dbank">
+                                    <option value="Y">Yes</option>
+                                    <option value="N">No</option>
+                                  </select>
+                                </div>
+                            </div>
+ 
+                            <div class="form-group">
+                                <span class="lbl col-sm-5"> </span>
+                                <div class="col-sm-7">
+                                    <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="supplierAddress(supplier)" data-ng-disabled="supplierForm.$invalid">
+                                        Sign Up
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="lbl col-sm-5"> </span>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /.page-content -->

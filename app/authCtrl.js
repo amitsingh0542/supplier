@@ -28,7 +28,7 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
     
     $scope.myDropDown = 'organization'
     $scope.supplier = {name:'', orgtype:'organization', orgname:'', url:'', pan:''}
-    $scope.supplierSign = function (supplier) {console.log(supplier);
+    $scope.supplierSign = function (supplier) {
         Data.post('signUpSupplier', {
             supplier: supplier
         }).then(function (results) {
